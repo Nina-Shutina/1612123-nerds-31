@@ -4,19 +4,21 @@
   <meta charset="UTF-8">
   <title>Каталог — Нёрдс</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="favicon/32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon/152.svg">
   <link rel="manifest" href="manifest.webmanifest">
+  <base href="https://htmlacademy-htmlcss.github.io/1612123-nerds-31/2/">
 </head>
 
-<body class="page-body inner-page">
+<body class="page-body">
 
 <header class="main-header">
-  <nav class="main-navigation">
+  <nav class="main-navigation-wrapper">
     <a class="main-header-logo" href="index.html">
       <img src="img/nerds-logo.svg" width="160" height="65"
  alt="Логотип Логотип дизайн-студия «Нёрдс»">
@@ -58,24 +60,25 @@
     </li>
   </ul>
 
-  <section class="features">
+  <section class="filters">
     <h2 class="subtitle">Фильтр товаров</h2>
-    <form method="get" action="https://echo.htmlacademy.ru">
+    <form method="filter" action="https://echo.htmlacademy.ru">
      <fieldset>
        <legend>Сетка:</legend>
        <ul>
-          <li>
-            <input type="radio" name="grid" value="adaptive"
-id="filter-adaptive" checked>
+          <li class="filter-option filter-radio">
+            <input class="filter-input-radio filter-input" type="radio" name="grid"
+value="adaptive" id="filter-adaptive" checked>
             <label for="filter-adaptive">Адаптивная</label>
           </li>
-          <li>
-            <input type="radio" name="grid" value="fixed" id="filter-fixed">
+          <li class="filter-option filter-radio">
+            <input class="filter-input-radio filter-input" type="radio" name="grid"
+value="fixed" id="filter-fixed">
             <label for="filter-fixed">Фиксированная</label>
           </li>
-          <li>
-            <input type="radio" name="grid" value="rubber-band"
-id="filter-responsive">
+          <li class="filter-option filter-radio">
+            <input class="filter-input-radio filter-input" type="radio" name="grid"
+value="rubber-band" id="filter-responsive">
             <label for="filter-responsive">Резиновая</label>
           </li>
         </ul>
@@ -85,113 +88,135 @@ id="filter-responsive">
      <fieldset>
        <legend>Особенности:</legend>
        <ul>
-          <li>
-            <input type="checkbox" name="slider"
+          <li class="filter-option filter-checkbox">
+            <input class="filter-input-checkbox filter-input" type="checkbox" name="slider"
 id="filter-slider" checked>
             <label for="filter-slider">Слайдер</label>
           </li>
-          <li>
-            <input type="checkbox" name="the-array-of-benefits"
+          <li class="filter-option filter-checkbox">
+            <input class="filter-input-checkbox filter-input" type="checkbox" name="the-array-of-benefits"
 id="filter-the-array-of-benefits">
             <label for="filter-the-array-of-benefits">Блок преимуществ</label>
           </li>
-          <li>
-            <input type="checkbox" name="news" id="filter-news" checked>
+          <li class="filter-option filter-checkbox">
+            <input class="filter-input-checkbox filter-input" type="checkbox" name="news"
+id="filter-news" checked>
             <label for="filter-news">Новости</label>
           </li>
-          <li>
-            <input type="checkbox" name="gallery" id="filter-gallery">
+          <li class="filter-option filter-checkbox">
+            <input class="filter-input-checkbox filter-input" type="checkbox" name="gallery"
+id="filter-gallery">
             <label for="filter-gallery">Галерея</label>
           </li>
-          <li>
-            <input type="checkbox" name="basket" id="filter-basket">
+          <li class="filter-option filter-checkbox">
+            <input class="filter-input-checkbox filter-input" type="checkbox" name="basket"
+id="filter-basket">
             <label for="filter-basket">Корзина</label>
             </li>
           </ul>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button type="submit" class="filter-button button">Показать</button>
      </form>
   </section>
 
-  <section>
+  <section class="catalog">
     <h2>Список готовых шаблонов</h2>
-    <ul>
-     <li>
+    <ul class="catalog-list">
+     <li class="catalog-item">
        <a href="pattern.html">
-         <h3>SEDONA Информационный сайт для туристов</h3>
-         <p>
+         <h3>
+           <span class="catalog-category">SEDONA</span>
+           <span class="catalog-item-title">«Информационный сайт для туристов»</span>
+          </h3>
+         <p class="catalog-item-image">
            <img src="img/mask-group-1.jpg" width="358" height="578"
 alt="SEDONA Информационный сайт для туристов">
      </p>
    </a>
-   <p>
-      <button type="button">9 900 ₽</button>
+   <p class="catalog-item-price">
+      <button class="button" type="button">9 900 ₽</button>
     </p>
      </li>
-     <li>
+     <li class="catalog-item">
        <a href="pattern.html">
-         <h3>Pink App Продуктовый лендинг приложения для iOS и Android</h3>
-         <p>
+         <h3>
+           <span class="catalog-category">Pink App</span>
+           <span class="catalog-item-title">«Продуктовый лендинг приложения для iOS и Android»</span>
+         </h3>
+         <p class="catalog-item-image">
            <img src="img/pink-app-copy.svg" width="71" height="30"
 alt="Pink App Продуктовый лендинг приложения для iOS и Android">
      </p>
    </a>
-   <p>
-      <button type="button">9 900 ₽</button>
+   <p class="catalog-item-price">
+      <button class="button" type="button">9 900 ₽</button>
     </p>
      </li>
-     <li>
+     <li class="catalog-item">
        <a href="pattern.html">
-         <h3>Barbershop Сайт салона красоты. Для мужчин, да.</h3>
-       <p>
+         <h3>
+           <span class="catalog-category">Barbershop</span>
+           <span class="catalog-item-title">Сайт салона красоты. Для мужчин,да.</span>
+         </h3>
+       <p class="catalog-item-image">
         <img src="img/mask-group-3.jpg" width="358" height="578"
 alt="Макет «Barbershop Borodinski»">
-    </p>
- </a>
-</li>
-<li>
-  <a href="pattern.html">
-    <h3>MISHKA Интернет-магазин вязаных игрушек</h3>
-  <p>
+      </p>
+    </a>
+    <p class="catalog-item-price">
+       <button class="button" type="button">9 900 ₽</button>
+     </p>
+   </li>
+   <li class="catalog-item">
+    <a href="pattern.html">
+     <h3>
+       <span class="catalog-category">MISHKA</span>
+       <span class="catalog-item-title">Интернет-магазин вязаных игрушек</span>
+     </h3>
+  <p class="catalog-item-image">
    <img src="img/mask-group-4.jpg" width="358" height="578"
 alt="Макет «Mashka»">
           </p>
         </a>
-      </li>
-      <li>
-        <a href="pattern.html">
-          <h3>A Plus Лендинг курсов повышения квалификации</h3>
-        <p>
-        <img src="img/mask-group-5.jpg" width="358" height="578" alt="">
+          <p class="catalog-item-price">
+            <button class="button" type="button">9 900₽</button>
           </p>
-        </a>
-      </li>
-      <li>
+       </li>
+       <li class="catalog-item">
         <a href="pattern.html">
-          <h3> КВАСТ Промо-сайт производителя  крафтового кваса</h3>
-          <p>
+      <h3>
+        <span class="catalog-category">A Plus</span>
+        <span class="catalog-item-title">Лендинг курсов повышения квалификации</span>
+      </h3>
+        <p class="catalog-item-image">
+         <img src="img/mask-group-5.jpg" width="358" height="578" alt="Макет A Plus">
+        </p>
+      </a>
+      <p class="catalog-item-price">
+        <button class="button" type="button">9 900₽</button>
+        </p>
+      </li>
+      <li class="catalog-item">
+        <a href="pattern.html">
+          <h3>
+            <span class="catalog-category">КВАСТ</span>
+            <span class="catalog-item-title">Промо-сайт производителя крафтового кваса</span>
+          </h3>
+          <p class="catalog-item-image">
              <img src="img/mask-group-6.jpg" width="358" height="578"
-alt="КВАСТ Промо-сайт производителя крафтового кваса">
+alt="КВАСТ Промо-сайт производителя  крафтового кваса">
           </p>
         </a>
-        <p>
-           <button type="button">9 900 ₽</button>
+        <p class="catalog-item-price">
+           <button class="button" type="button">9 900 ₽</button>
          </p>
       </li>
     </ul>
-    <ul>
-      <li>
-        <a>1</a>
-      </li>
-      <li>
-        <a href="#">2</a>
-      </li>
-      <li>
-        <a href="#">3</a>
-      </li>
-      <li>
-        <a href="#">Следующая</a>
-      </li>
+    <ul class="pagination-list">
+      <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+      <li class="pagination-item"><a href="#">2</a></li>
+      <li class="pagination-item"><a href="#">3</a></li>
+      <li class="pagination-item"><a href="#">Следующая</a></li>
     </ul>
   </section>
 </main>
@@ -210,7 +235,7 @@ alt="КВАСТ Промо-сайт производителя крафтов�
      <a class="footer-address" href="blank.html">Как нас найти?</a>
      Телефон: <a class="footer-phone" href="tel:+78005558628">
 +7 800 555-86-28</a>
-  
+
    <p>
      <a href="blank.html">Напишите нам</a>
    </p>
