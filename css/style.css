@@ -104,7 +104,10 @@ img {
 /* Main navigation */
 
 .main-navigation {
+  width: 1160px;
+  height: 65px;
   display: grid;
+  grid-template-columns: 1fr min-content;
   font-size: 16px;
   line-height: 30px;
   color: var(--basic-black);
@@ -113,15 +116,9 @@ img {
 
 .main-navigation-wrapper {
   display: grid;
-  grid-template-columns:160px 1fr min-content;
   background-color: var(--basic-extra-light);
   width: 437px;
   margin: 0 auto;
-  padding: 0 10px;
-}
-
-.page-body .main-header-logo {
-  order: 0;
 }
 
 /* Site Navigation */
@@ -143,11 +140,46 @@ img {
   padding: 0 10px;
 }
 
+ /*.container  {
+  width: 1157px;
+  height: 431px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.container 3 {
+  width: 1100px;
+  height: 347px;
+}
+
+.container 4 {
+  width: 1174px;
+  height: 413px;
+}
+
+.container 5 {
+  width: 1159px;
+  height: 184px;
+}
+
+.container 6 {
+  width: 1140px;
+  height: 416px;
+}
+
+.container 7 {
+  width: 1060px;
+  height: 81px;
+} /*
+
 /* Logo */
 
 .main-header-logo {
-  order: 0;
-  justify-self: left;
+  width: 160px;
+  height: 65px;
+  margin-left: 140px;
+  margin-top: 18px;
+  margin-right: 202px;
 }
 
 .main-header-bar {
@@ -155,8 +187,12 @@ img {
 }
 
 .site-navigation {
-  margin: 0;
-  padding: 0;
+  width: 437px;
+  height: 30px;
+  padding-top: 44px;
+  padding-right: 286px;
+  padding-bottom: 21px;
+  padding-left: 202px;
   list-style: none;
 }
 
@@ -167,7 +203,12 @@ img {
 /* User navigation */
 
 .user-navigation {
-
+  width: 75px;
+  height: 30px;
+  padding-top: 44px;
+  padding-right: 140px;
+  padding-bottom: 10px;
+  padding-left: 286px;
 }
 
 .site-navigation a,
@@ -238,10 +279,42 @@ img {
   line-height: 45px;
 }
 
-.about-us-list {
+.about-us-main {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.subtitle-1 h1 {
+  font-size: 45px;
+}
+
+.subtitle-1 p {
+  font-size: 16px;
+}
+
+.subtitle-2 h2 {
+  font-size: 16px;
+}
+
+.about-us-main {
+  font-size: 16px;
+}
+
+.about-us-additional h2 {
+  font-size: 16px;
+}
+
+.percent span {
+  font-size: 45px;
+}
+
+.percent sup {
+  font-size: 26px;
+}
+
+.percent p {
+  font-size: 16px;
 }
 
 /* Button */
@@ -514,4 +587,13 @@ img {
 
 .slider-item {
  background-color: var(--basic-extra-light);
+}
+
+.slider {
+  width: 1157px;
+  height: 431px;
+  padding-left: 153px;
+  padding-top: 65px;
+  padding-right: 130px;
+  padding-bottom: 118px;
 }
