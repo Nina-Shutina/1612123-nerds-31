@@ -141,6 +141,10 @@ img {
   /*padding: 0 10px;*/
 }
 
+.container {
+  position: relative;
+}
+
 .main-navigation-wrapper .container {
   display: flex;
   justify-content: space-between;
@@ -161,6 +165,8 @@ img {
 }
 
 .site-navigation {
+  display: flex;
+  flex-wrap: wrap;
   width: 440px;
   height: 30px;
   padding-top: 44px;
@@ -211,14 +217,30 @@ img {
 
   /* Login link */
 
+  .login-link::before {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 24px;
+    width: 15px;
+    height: 15px;
+    background-image: url("img/cart-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
   .user-navigation .login-link {
     padding-left: 80px;
+    position: relative;
   }
 
 /* Features */
 
 .features {
   margin-bottom: 80px;
+  border-bottom: 1px;
+  border-style: solid;
+  color: var(--basic-extra-light);
 }
 
 .features-list {
@@ -231,6 +253,7 @@ img {
 }
 
 .feature-item {
+  display: none;
   width: 300px;
   text-align: left;
 }
@@ -284,7 +307,9 @@ img {
 }
 
 .about-us-main {
+  display: none;
   margin: 0;
+  /* margin-bottom: 25px;*/
   padding: 0;
   list-style: none;
 }
@@ -335,6 +360,7 @@ img {
 .button {
   display: inline-block;
   margin-right: 240px;
+  padding: 10px 30px;
   font: inherit;
   text-align: center;
   color: var(--basic-white);
@@ -540,6 +566,12 @@ img {
 }
 
 .footer-social ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /*width: 141px;*/
+  margin: 0 auto;
+  padding: 0;
   list-style: none;
 }
 
@@ -553,6 +585,12 @@ img {
 /* Social button */
 
 .social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 81px;
+  height: 81px;
+  background-color: var(--special5);
   color: inherit;
 }
 
@@ -562,6 +600,11 @@ img {
 
 .social-button:focus {
   background-color: var(--special10);
+}
+
+.social-button:hover path,
+.social-button:focus path {
+  fill: var(--basic-white);
 }
 
 /* Modal */
@@ -588,6 +631,8 @@ img {
 }
 
 .modal .button {
+  display: block;
+  width: 100%;
   margin-top: 47px;
   margin-right: 0;
 }
@@ -604,7 +649,27 @@ img {
 }
 
 .appointment-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+/*.appointment-item {
+  width: 140px;
+  margin-top: 0;
+  margin-bottom: 10px;
+} */
+
+.appointment-item input {
+  width: 360px;
+  padding-top: 16px;
+  padding-right: 14px;
+  padding-bottom:16px;
+  padding-left: 16px;
+  font: inherit;
+  background-color: transparent;
+  border: 2px solid var(--basic-black);
+  box-sizing: border-box;
 }
 
 /* Percent */
