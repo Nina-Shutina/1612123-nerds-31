@@ -221,9 +221,8 @@ img {
 .main-header {
   display: grid;
   background-color: var(--basic-extra-light);
-  padding-bottom: 78px;
   padding-left: 140px;
-/*   padding-top: 18px; */
+  padding-top: 49px;
   padding-right: 140px;
   margin: 0;
 }
@@ -274,13 +273,9 @@ img {
 /* Container */
 
 .container {
-  /*min-height: 413px;*/
   width: 1160px;
   margin: 0 auto;
   padding: 0 10px;
-}
-
-.container {
   position: relative;
 }
 
@@ -296,7 +291,6 @@ img {
   order: 0;
   width: 160px;
   height: 65px;
-  margin-top: 18px;
   margin-right: 202px;
 }
 
@@ -415,11 +409,13 @@ img {
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
-  padding-bottom: 16px;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 16px;
 }
 
 .feature-item p {
-  margin: 0 10px;
+  margin: 0;
   padding-bottom: 32px;
 }
 
@@ -531,9 +527,11 @@ img {
 .about-us-additional h2 {
   font-size: 16px;
   margin-bottom: 31px;
+  text-transform: uppercase;
 }
 
 .percent {
+  margin: 0;
  margin-right: 42px;
  margin-bottom: 10px;
 }
@@ -561,6 +559,7 @@ img {
 .about-us h2 {
  font-size: 16px;
  margin-bottom: 23px;
+ text-transform: uppercase;
 }
 
 /* Button */
@@ -568,7 +567,7 @@ img {
 .button {
   display: inline-block;
   margin-right: 240px;
-  padding: 10px 30px;
+  padding: 16px 40px;
   font: inherit;
   text-align: center;
   color: var(--basic-white);
@@ -578,30 +577,25 @@ img {
   border: none;
 }
 
+.button-slider {
+  padding: 16px 54px;
+}
+
+.button-footer {
+  margin-right: 0;
+  padding: 16px 44px;
+}
+
 .button.container{
   padding-bottom: 80px;
 }
 
 .button-1 {
-  font: inherit;
-  text-align: center;
-  color: var(--basic-white);
-  vertical-align: middle;
-  text-transform: uppercase;
   background-color: var(--special2);
-  border: none;
-  padding: 10px 30px;
 }
 
 .button-2 {
-  font: inherit;
-  text-align: center;
-  color: var(--basic-white);
-  vertical-align: middle;
-  text-transform: uppercase;
   background-color: var(--special3);
-  border: none;
-  padding: 10px 30px;
 }
 
 .button:hover {
@@ -977,13 +971,13 @@ img {
   background-position: 0 0;
   background-repeat: repeat;
   background-color: var(--basic-white);
-  width: 1440px;
-  height: 593px;
+  min-height: 593px;
 }
 
 .main-footer .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin: 68px auto;
 }
 
 /*.main-footer .footer-social {
@@ -999,20 +993,32 @@ img {
 
 
 .footer-contacts {
+  position: relative;
   color: var(--special4);
   text-decoration: none;
-  width: 1440px;
-  height: 416px;
   margin-bottom: 68px;
 }
 
-/*.footer-contacts img {
-  top: 80px;
-}*/
+.footer-info {
+  position: absolute;
+  top: 54px;
+  left: 140px;
+  flex-direction: column;
+  width: 218px;
+  min-height: 208px;
+  background-color: #ffffff;
+  padding: 50px;
+}
+
+.footer-contacts img {
+  width: 100%;
+}
 
 .footer-phone {
   color: var(--special4);
   text-decoration: none;
+  margin-bottom: 37px;
+  display: block;
 }
 
 .footer-social .container {
@@ -1026,14 +1032,27 @@ img {
 .footer-social ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  /*margin: 0 auto;*/
-  /*padding: 0;*/
+  margin: 0;
+  padding: 0;
   list-style: none;
   justify-self: left;
-  padding-right: 9px;
-  width: 243px;
+  width: 280px;
 }
+
+.footer-social li {
+  margin-right: 10px;
+}
+
+.footer-pin {
+  position: absolute;
+  top: 70px;
+  right: 362px;
+}
+
+.footer-pin img {
+  width: 231px;
+  height: 190px;
+ }
 
 .contact-us-title {
   font-size: 18px;
@@ -1052,6 +1071,7 @@ img {
 .caption h2 {
   font-size: 36px;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 
 .caption p {
@@ -1087,13 +1107,18 @@ img {
 /* Modal */
 
 .modal {
-  display: grid;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: #ffffff;
+  display: none;
   width: 960px;
   height: 590px;
   color: var(--basic-black);
   background-position: 0 0;
   background-repeat: repeat;
-  /* box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);*/
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
 .modal-item {
@@ -1193,6 +1218,7 @@ img {
 
 .slider-item {
   background-color: var(--basic-extra-light);
+  display: none;
 }
 
 .slider-item-1 {
@@ -1207,6 +1233,7 @@ img {
   background-image: url("../img/nerds-index-slide2-1.png");
   background-repeat: no-repeat;
   background-position: bottom right;
+
 }
 
 .slider-item-3 {
@@ -1214,37 +1241,38 @@ img {
   background-image: url("../img/nerds-index-slide3-1.png");
   background-repeat: no-repeat;
   background-position: bottom right;
+  display: block;
 }
 
 .title {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
-  padding-top: 78px;
-  padding-bottom: 25px;
   margin: 0;
+  padding-top: 78px;
+  margin-bottom: 37px;
 }
 
 .subtitle {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  padding-bottom: 38px;
+  margin-bottom: 26px;
 }
 
 .slider-controls {
   position: absolute;
   z-index: 20;
   display: flex;
-  width: 67px;
+  width: 100px;
   justify-content: space-between;
   bottom: 96px;
 }
 
 .slider-controls button {
   padding: 0;
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   background-color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 50%;
@@ -1262,8 +1290,7 @@ img {
   background-color: transparent;
   border: 2px solid #c1c1c1;
   border-radius: 50%;
-  margin-left: -4px;
-  margin-top: -4px;
+  transform: translate(-50%,-50%);
 }
 
 .slider-controls .current {
@@ -1272,16 +1299,13 @@ img {
 
 /* Brands */
 
-.brands {
+.brands ul {
+  display: flex;
+  list-style: none;
+  margin-top: 64px;
+  margin-bottom: 59px;
   border-top: 1px solid var(--basic-extra-light);
   border-bottom: 1px solid var(--basic-extra-light);
-}
-
-.brands ul {
-display: flex;
-list-style: none;
-margin-top: 64px;
-margin-bottom: 59px;
 }
 
 .brands li {
@@ -1296,18 +1320,22 @@ margin-bottom: 59px;
   width: 2px;
   height: 52px;
   background-color: #eeeeee;
+  transform: translateY(-50%);
 }
 
-.brands..container {
+.brands.container {
   width: 1159px;
   height: 184px;
   /*padding-left: 95px;*/
 }
 
-.brands img {
-  padding-top: 63px;
-  padding-bottom: 60px;
-  padding-left: 48px;
-  margin-right: auto;
-  margin-left: auto
+.brands-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brands-item a {
+  display: block;
+  padding: 25px;
 }
