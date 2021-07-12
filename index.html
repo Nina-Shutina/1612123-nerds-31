@@ -60,6 +60,23 @@
             <button type="button" aria-label="Второй слайд"></button>
             <button type="button" aria-label="Третий слайд"></button>
           </div>
+          <ul>
+            <li class="filter-option filter-radio">
+              <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid"
+                value="adaptive" id="filter-adaptive" checked>
+              <label for="filter-adaptive"></label>
+            </li>
+            <li class="filter-option filter-radio">
+              <input class="visually-hidden filter-input-radio filter-input" type="radio" name="grid"
+                value="fixed" id="filter-fixed">
+              <label for="filter-fixed"></label>
+            </li>
+            <li class="filter-option filter-radio">
+              <input class=" visually-hidden filter-input-radio filter-input" type="radio" name="grid"
+                value="rubber-band" id="filter-responsive">
+            <label for="filter-responsive"></label>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="features">
@@ -216,23 +233,22 @@
          method="post">
          <p class="appointment-item">
             <label for="appointment-name">Ваше имя:</label>
-            <input id="appointment-name" type="text" name="name surname"
+            <input id="appointment-name" type="name" name="surname"
                placeholder="Имя Фамилия">
          </p>
          <p class="appointment-item">
             <label for="appointment-email">Ваше email:</label>
-            <input id="appointment-email" type="text" name="email"
+            <input id="appointment-email" type="email" name="email"
                placeholder="email@example.com">
          </p>
-         <p class="appointment-item">
+         <p class="appointment-item appointment-textarea">
             <label for="appointment-the-text-of-the-letter">Текст письма:</label>
-            <textarea rows="10" cols="45" id="appointment-the-text-of-the-letter" name="in free form"
-               placeholder="В свободной форме">
-            </textarea>
+            <textarea rows="5" id="appointment-the-text-of-the-letter" name="in free form" placeholder="В свободной форме"></textarea>
          </p>
          <button class="button" type="submit">Отправить</button>
       </form>
       <span class="close"></span>
       </section>
+    <script src="js/main.js"></script>
   </body>
 </html>
