@@ -761,7 +761,7 @@ img {
 }
 
 .arrow-bottom span::before,
-.arrow-top span::before {
+.arrow-top a::before {
   content: "";
   position: absolute;
   width: 11px;
@@ -774,7 +774,7 @@ img {
   background-image: url("../img/icon-down-dir.svg");
 }
 
-.arrow-top span::before {
+.arrow-top a::before {
   background-image: url("../img/icon-up-dir.svg");
   left: 28px;
 }
