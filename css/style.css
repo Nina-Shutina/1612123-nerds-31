@@ -760,7 +760,7 @@ img {
   position: relative;
 }
 
-.arrow-bottom span::before,
+.arrow-bottom  a::before,
 .arrow-top a::before {
   content: "";
   position: absolute;
@@ -770,7 +770,7 @@ img {
   left: 0;
 }
 
-.arrow-bottom span::before {
+.arrow-bottom a::before {
   background-image: url("../img/icon-down-dir.svg");
 }
 
